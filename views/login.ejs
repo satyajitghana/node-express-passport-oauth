@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include partials/head %>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body class="container">
+
+    <header>
+        <% include partials/header %>
+    </header>
+
+    <main>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <div class="row">
+                    <h1><%=title%></h1>
+                </div>
+
+                <div class="row pt-5">
+                    <p>Available Social Logins</p>
+                    <div class="col-md-3">
+                        <a class="btn btn-block btn-social btn-twitter disabled">
+                            <span class="fa fa-twitter"></span> Sign in with Twitter
+                        </a>
+                        <a class="btn btn-block btn-social btn-linkedin disabled">
+                            <span class="fa fa-linkedin"></span> Sign in with Linkedin
+                        </a>
+                        <a class="btn btn-block btn-social btn-google disabled">
+                            <span class="fa fa-google"></span> Sign in with Google
+                        </a>
+                        <a class="btn btn-block btn-social btn-microsoft disabled">
+                            <span class="fa fa-windows"></span> Sign in with Microsoft
+                        </a>
+                        <a class="btn btn-block btn-social btn-facebook" href="<%=apiURL%>/facebook">
+                            <span class="fa fa-facebook"></span> Sign in with Facebook
+                        </a>
+                        <a class="btn btn-block btn-social btn-github disabled">
+                            <span class="fa fa-github"></span> Sign in with Github
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <% include partials/footer %>
+    </footer>
+
+</body>
+
+</html>

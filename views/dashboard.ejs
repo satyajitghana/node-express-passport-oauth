@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include partials/head %>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body class="container">
+
+    <header>
+        <% include partials/header %>
+    </header>
+
+    <main>
+        <div class="jumbotron">
+            <div class="container">
+                <div class="row">
+                    <h1>Dashboard</h1>
+                </div>
+                <div class="row">
+                    <p>ID: <%=user.id%></p>
+                    <% if (user.username) { %>
+                    <p>Username: <%=user.username%></p>
+                    <% } %>
+                    <p>Name: <%=user.displayName%></p>
+                    <% if (user.emails) { %>
+                    <p>Email: <%= user.emails[0].value %></p>
+                    <% } %>
+                </div>
+                <div class="row">
+                    <a type="button" class="btn btn-danger" href="/logout">Logout</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <% include partials/footer %>
+    </footer>
+
+</body>
+
+</html>
